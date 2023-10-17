@@ -1,0 +1,64 @@
+---
+title: ActiveInteractor
+layout: empty
+logo_variant: white
+---
+<div class='hero is-primary'>
+  <header class="hero-head">
+    {% include main-nav.html %}
+  </header>
+  <div class="hero-body">
+    <h1 class="is-sr-only">ActiveInteractor</h1>
+    <img src="/assets/images/logo_white.png" alt="ActiveInteractor"/>
+  </div>
+</div>
+
+<main class="container my-6">
+  <div class="content">
+    <div class="block">
+      <p>
+        ActiveInteractor is an implementation of the <a href="https://en.wikipedia.org/wiki/Command_pattern" target="_blank">command pattern</a> for Ruby with <a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html" target="_blank">ActiveModel::Validations</a>
+        inspired by the <a href="https://github.com/collectiveidea/interactor" target="_blank">interactor gem</a>. Rich support for attributes, callbacks, and validations, and thread safe performance methods.
+      </p>
+      <p>
+        Reduce controller bloat with procedural service objects.
+      </p>
+    </div>
+    <hr />
+    <div class="block">
+      <h2 class="title">Features</h2>
+      <ul>
+        <li>Context Validation</li>
+        <li>Callbacks</li>
+        <li>Thread Safety</li>
+        <li>Organize multiple interactors conditionally or in parallel</li>
+      </ul>
+    </div>
+    <hr />
+    <div class="block">
+      <h2>Install</h2>
+      <p>
+        Add this line to your application's Gemfile:
+
+        {% highlight ruby %}gem 'activeinteractor'{% endhighlight %}
+      </p>
+      <p>
+        Or install it yourself as:
+
+        <figure class="highlight">
+          <pre><span class="n">gem install activeinteractor</span></pre>
+        </figure>
+      </p>
+    </div>
+    <hr />
+    <div class="block">
+      <h2>License</h2>
+      <p>The gem is available as open source under the terms of the <a href="https://opensource.org/license/mit/">MIT License</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  {% include footer.html %}
+</footer>
+

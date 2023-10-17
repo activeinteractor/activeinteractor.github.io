@@ -1,0 +1,5 @@
+require:
+  - rubocop-rake
+
+Rake/Desc:
+  Enabled: false

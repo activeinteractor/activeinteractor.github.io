@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="{{ root_url }}/assets/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class='hero is-fullheight'>
+      <header class="hero-head">
+        {% include main-nav.html %}
+      </header>
+      <main class="hero-body">
+        {{ content }}
+      </main>
+      <footer class="hero-foot">
+        {% include footer.html %}
+      </footer>
+    </div>
+  </body>
+</html>

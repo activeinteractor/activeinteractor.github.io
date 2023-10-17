@@ -1,0 +1,18 @@
+git clone git@github.com:activeinteractor/activeinteractor.git ./tmp
+cd ./tmp
+git fetch origin main --tags
+
+mkdir -p ../api/activeinteractor
+echo "\033[0;36m==> Buidling Docs for activeinteractor/activeinteractor main\033[0m"
+bundle exec yard -o ../api/activeinteractor
+
+git_tags=$(git tag)
+for tag in $git_tags
+do
+  echo "\033[0;36m==> Buidling Docs for activeinteractor/activeinteractor ${tag}\033[0m"
+  mkdir -p ../api/activeinteractor/${tag}
+  bundle exec yard -o ../api/activeinteractor
+done
+
+cd ..
+rm -rf ./tmp

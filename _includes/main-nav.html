@@ -1,0 +1,32 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ site.url }}">
+      {% if page.logo_variant %}
+        <img src="/assets/images/logo_icon_{{ page.logo_variant }}.png" width="auto" height="54">
+      {% else %}
+        <img src="/assets/images/logo_icon.png" width="auto" height="54">
+      {% endif %}
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-nav">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="main-nav" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/api/activeinteractor">
+        API
+      </a>
+
+      <a class="navbar-item" href="https://github.com/activeinteractor/activeinteractor" target="_blank">
+        Source Code
+      </a>
+    </div>
+
+    <div class="navbar-end">
+    </div>
+  </div>
+</nav>
