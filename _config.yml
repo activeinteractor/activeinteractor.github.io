@@ -33,3 +33,4 @@ exclude:
   - bin
   - lib
   - Rakefile
+  - README.md

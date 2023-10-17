@@ -1,6 +1,6 @@
 ---
 title: ActiveInteractor
-layout: empty
+layout: home
 logo_variant: white
 ---
 <div class='hero is-primary'>
@@ -28,10 +28,15 @@ logo_variant: white
     <div class="block">
       <h2 class="title">Features</h2>
       <ul>
-        <li>Context Validation</li>
-        <li>Callbacks</li>
-        <li>Thread Safety</li>
-        <li>Organize multiple interactors conditionally or in parallel</li>
+        {% for feature in site.data.features %}
+          {% if feature.href %}
+          <li>
+            <a href="{{ feature.href }}">{{ feature.text }}</a>
+          </li>
+          {% else %}
+          <li>{{ feature.text }}</li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </div>
     <hr />
