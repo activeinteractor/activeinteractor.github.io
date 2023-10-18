@@ -1,8 +1,9 @@
 ---
-- active_interactor_api:
-  href: /api/activeinteractor
+- href: /getting-started
+  text: Getting Started
+
+- href: /api/activeinteractor
   text: API
 
-- source_code:
-  href: https://github.com/activeinteractor/activeinteractor
+- href: https://github.com/activeinteractor/activeinteractor
   text: Source Code
