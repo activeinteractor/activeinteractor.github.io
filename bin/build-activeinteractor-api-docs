@@ -12,7 +12,7 @@ for tag in $git_tags
 do
   echo "\033[0;36m==> Buidling Docs for activeinteractor/activeinteractor ${tag}\033[0m"
   mkdir -p ../api/activeinteractor/${tag}
-  bundle exec yard -o ../api/activeinteractor
+  bundle exec yard -o ../api/activeinteractor/${tag}
 done
 
 cd ..
