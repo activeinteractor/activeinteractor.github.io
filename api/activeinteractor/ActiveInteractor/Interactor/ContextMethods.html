@@ -231,20 +231,20 @@
       <pre class="lines">
 
 
-58
-59
-60
-61
 62
 63
-64</pre>
+64
+65
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_generate_and_validate_output_context!'>generate_and_validate_output_context!</span>
   <span class='ivar'>@output</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_output_context_class'>output_context_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
-  <span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_validate!'>validate!</span>
+  <span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../Error.html" title="ActiveInteractor::Error (class)">Error</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='label'>errors:</span> <span class='ivar'>@output</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='op'>::</span><span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:failed_at_output</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -269,12 +269,12 @@
       <pre class="lines">
 
 
-66
-67
-68</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_output_to_result_context!'>output_to_result_context!</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:result_context</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_for_output_context'>for_output_context</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='comma'>,</span> <span class='ivar'>@output</span><span class='rparen'>)</span>
@@ -321,20 +321,20 @@
       <pre class="lines">
 
 
-70
-71
-72
-73
 74
 75
-76</pre>
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/context_methods.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate_input_and_generate_runtime_context!'>validate_input_and_generate_runtime_context!</span>
   <span class='ivar'>@input</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_input_context_class'>input_context_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@raw_input</span><span class='rparen'>)</span>
-  <span class='ivar'>@input</span><span class='period'>.</span><span class='id identifier rubyid_validate!'>validate!</span>
+  <span class='ivar'>@input</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
   <span class='kw'>return</span> <span class='lparen'>(</span><span class='ivar'>@context</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_runtime_context_class'>runtime_context_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@raw_input</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@input</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../Error.html" title="ActiveInteractor::Error (class)">Error</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='label'>errors:</span> <span class='ivar'>@input</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='op'>::</span><span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:failed_at_input</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -349,7 +349,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Oct 17 14:23:44 2023 by
+  Generated on Sat Oct 28 15:44:03 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

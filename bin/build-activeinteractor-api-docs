@@ -1,6 +1,7 @@
 git clone git@github.com:activeinteractor/activeinteractor.git ./tmp
 cd ./tmp
 git fetch origin main --tags
+bundle install
 
 mkdir -p ../api/activeinteractor
 echo "\033[0;36m==> Buidling Docs for activeinteractor/activeinteractor main\033[0m"

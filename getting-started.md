@@ -106,7 +106,7 @@ context that are **not** declared by the `returns` method will be discarded and 
 
 #### Reusable Contexts
 
-It is possible to define your `context` objects in seperate files by calling the `accepts_arguments_matching` and `returns_data_matching` methods on your
+It is possible to define your `context` objects in separate files by calling the `accepts_arguments_matching` and `returns_data_matching` methods on your
 interactor. This is handy when you have a lot of interactors that accept the same arguments or return the same payloads.
 
 ```ruby
