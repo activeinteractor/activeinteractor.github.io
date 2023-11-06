@@ -23,7 +23,7 @@ gem 'http_parser.rb', '~> 0.6.0', platforms: [:jruby]
 
 group :development, :test do
   gem 'code-scanning-rubocop', '~> 0.6'
-  gem 'rake', '~> 13.0'
+  gem 'rake', '~> 13.1'
   gem 'rubocop', '~> 1.56'
   gem 'rubocop-performance', '~> 1.19'
   gem 'rubocop-rake', '~> 0.6'
