@@ -104,14 +104,12 @@
   
 </div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="../Base.html" title="ActiveInteractor::Base (class)">Base</a></span></p>
+</div>
 
 
-
-  <h2>Constant Summary</h2>
-  
-  <h3 class="inherited">Constants included
-     from <span class='object_link'>Type::DeclerationMethods</span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Type/DeclerationMethods.html#Boolean-constant" title="ActiveInteractor::Type::DeclerationMethods::Boolean (constant)">Type::DeclerationMethods::Boolean</a></span></p>
 
 
 
@@ -124,28 +122,6 @@
     </h2>
 
     <ul class="summary">
-      
-        <li class="protected ">
-  <span class="summary_signature">
-    
-      <a href="#fail!-instance_method" title="#fail! (instance method)">#<strong>fail!</strong>(errors = {})  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title protected">protected</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -166,7 +142,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of Base.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Base.</p>
 </div></span>
   
 </li>
@@ -194,39 +171,10 @@
 </li>
 
       
-        <li class="protected ">
-  <span class="summary_signature">
-    
-      <a href="#with_notification-instance_method" title="#with_notification (instance method)">#<strong>with_notification</strong>(action)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  <span class="note title protected">protected</span>
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
     </ul>
   
 
 
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -245,11 +193,6 @@
   
   
   
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="ContextMethods.html" title="ActiveInteractor::Interactor::ContextMethods (module)">ContextMethods</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ContextMethods.html#generate_and_validate_output_context!-instance_method" title="ActiveInteractor::Interactor::ContextMethods#generate_and_validate_output_context! (method)">#generate_and_validate_output_context!</a></span>, <span class='object_link'><a href="ContextMethods.html#output_to_result_context!-instance_method" title="ActiveInteractor::Interactor::ContextMethods#output_to_result_context! (method)">#output_to_result_context!</a></span>, <span class='object_link'><a href="ContextMethods.html#validate_input_and_generate_runtime_context!-instance_method" title="ActiveInteractor::Interactor::ContextMethods#validate_input_and_generate_runtime_context! (method)">#validate_input_and_generate_runtime_context!</a></span></p>
-
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -264,7 +207,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Base.</p>
+    
+<p>Returns a new instance of Base.</p>
 
 
   </div>
@@ -278,13 +222,13 @@
       <pre class="lines">
 
 
+9
 10
 11
-12
-13</pre>
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@raw_input</span> <span class='op'>=</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -303,73 +247,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="fail!-instance_method">
-  
-    #<strong>fail!</strong>(errors = {})  &#x21d2; <tt>Object</tt>  <span class="extras">(protected)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../Error.html" title="ActiveInteractor::Error (class)">Error</a></span></tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 25</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='id identifier rubyid_with_notification'>with_notification</span><span class='lparen'>(</span><span class='symbol'>:rollback</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payload'>payload</span><span class='op'>|</span>
-    <span class='id identifier rubyid_rollback'>rollback</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='ivar'>@output</span><span class='comma'>,</span> <span class='label'>errors:</span> <span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:result</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../Error.html" title="ActiveInteractor::Error (class)">Error</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="perform!-instance_method">
+  <h3 class="signature first" id="perform!-instance_method">
   
     #<strong>perform!</strong>  &#x21d2; <tt>Object</tt> 
   
@@ -383,56 +261,22 @@
       <pre class="lines">
 
 
+14
 15
 16
 17
 18
 19
-20
-21</pre>
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perform!'>perform!</span>
   <span class='id identifier rubyid_with_notification'>with_notification</span><span class='lparen'>(</span><span class='symbol'>:perform</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payload'>payload</span><span class='op'>|</span>
     <span class='id identifier rubyid_interact'>interact</span>
     <span class='id identifier rubyid_generate_and_validate_output_context!'>generate_and_validate_output_context!</span>
-    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:result</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='id identifier rubyid_output_to_result_context!'>output_to_result_context!</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="with_notification-instance_method">
-  
-    #<strong>with_notification</strong>(action)  &#x21d2; <tt>Object</tt>  <span class="extras">(protected)</span>
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-36
-37
-38
-39
-40</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/interactor/base.rb', line 36</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_with_notification'>with_notification</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
-  <span class='const'>ActiveSupport</span><span class='op'>::</span><span class='const'>Notifications</span><span class='period'>.</span><span class='id identifier rubyid_instrument'>instrument</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_classify'>classify</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_payload'>payload</span><span class='op'>|</span>
-    <span class='kw'>yield</span> <span class='id identifier rubyid_payload'>payload</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='symbol'>:result</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="ActiveInteractor::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="ActiveInteractor::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='label'>data:</span> <span class='id identifier rubyid_output_to_result_context!'>output_to_result_context!</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -445,7 +289,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:41 2023 by
+  Generated on Mon Nov  6 19:37:51 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

@@ -144,7 +144,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute description.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute description.</p>
 </div></span>
   
 </li>
@@ -172,7 +173,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute error_messages.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute error_messages.</p>
 </div></span>
   
 </li>
@@ -200,7 +202,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute name.</p>
 </div></span>
   
 </li>
@@ -282,7 +285,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of Attribute.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Attribute.</p>
 </div></span>
   
 </li>
@@ -393,7 +397,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Attribute.</p>
+    
+<p>Returns a new instance of Attribute.</p>
 
 
   </div>
@@ -450,7 +455,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute description.</p>
+    
+<p>Returns the value of attribute description.</p>
 
 
   </div>
@@ -492,7 +498,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute error_messages.</p>
+    
+<p>Returns the value of attribute error_messages.</p>
 
 
   </div>
@@ -534,7 +541,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute name.</p>
+    
+<p>Returns the value of attribute name.</p>
 
 
   </div>
@@ -733,13 +741,17 @@
 
 36
 37
-38</pre>
+38
+39
+40</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
-  <span class='id identifier rubyid_validate_presence!'>validate_presence!</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_required?'>required?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:blank</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -761,12 +773,12 @@
       <pre class="lines">
 
 
-40
-41
-42</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='ivar'>@user_provided_value</span> <span class='op'>||</span> <span class='id identifier rubyid_default_value'>default_value</span>
@@ -781,7 +793,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:39 2023 by
+  Generated on Mon Nov  6 19:37:48 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

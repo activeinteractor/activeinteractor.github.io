@@ -62,7 +62,7 @@
       <div id="content"><h1>Class: ActiveInteractor::Context::Attribute
   
   
-  
+  <span class="private note title">Private</span>
 </h1>
 <div class="box_info">
   
@@ -99,23 +99,21 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This class is part of a private API.</strong>
+  You should avoid using this class if possible, as it may be removed or be changed in the future.
+</p>
+<p>An attribute of a <span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">context</a></span></p>
 
-  
-    <h2>
-      Constant Summary
-      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
-    </h2>
 
-    <dl class="constants">
-      
-        <dt id="NO_DEFAULT_VALUE-constant" class="">NO_DEFAULT_VALUE =
-          
-        </dt>
-        <dd><pre class="code"><span class='symbol'>:__no_default_value__</span></pre></dd>
-      
-    </dl>
+  </div>
+</div>
+<div class="tags">
   
 
+</div>
 
 
 
@@ -125,7 +123,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; Object </a>
+      <a href="#description-instance_method" title="#description (instance method)">#<strong>description</strong>  &#x21d2; String<sup>?</sup> </a>
     
 
     
@@ -141,10 +139,10 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute description.</p>
+    <span class="summary_desc"><div class='inline'><p>The attribute description.</p>
 </div></span>
   
 </li>
@@ -153,7 +151,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#error_messages-instance_method" title="#error_messages (instance method)">#<strong>error_messages</strong>  &#x21d2; Object </a>
+      <a href="#error_messages-instance_method" title="#error_messages (instance method)">#<strong>error_messages</strong>  &#x21d2; Array&lt;Symbol, String, nil&gt; </a>
     
 
     
@@ -169,10 +167,10 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute error_messages.</p>
+    <span class="summary_desc"><div class='inline'><p>The attribute error messages.</p>
 </div></span>
   
 </li>
@@ -181,7 +179,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Symbol </a>
     
 
     
@@ -197,10 +195,10 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute name.</p>
+    <span class="summary_desc"><div class='inline'><p>The attribute name.</p>
 </div></span>
   
 </li>
@@ -222,7 +220,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#assign_value-instance_method" title="#assign_value (instance method)">#<strong>assign_value</strong>(value)  &#x21d2; Object </a>
+      <a href="#assign_value-instance_method" title="#assign_value (instance method)">#<strong>assign_value</strong>(value)  &#x21d2; void </a>
     
 
     
@@ -233,10 +231,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Assign a value to the attribute.</p>
+</div></span>
   
 </li>
 
@@ -244,7 +243,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#default_value-instance_method" title="#default_value (instance method)">#<strong>default_value</strong>  &#x21d2; Object </a>
+      <a href="#default_value-instance_method" title="#default_value (instance method)">#<strong>default_value</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -255,10 +254,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>The attribute default value.</p>
+</div></span>
   
 </li>
 
@@ -266,7 +266,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(owner, name, type, description = nil, **options)  &#x21d2; Attribute </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(owner, name, type, description = nil, **options)  &#x21d2; ActiveInteractor::Context::Attribute </a>
     
 
     
@@ -279,10 +279,10 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of Attribute.</p>
+    <span class="summary_desc"><div class='inline'><p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">Attribute</a></span>.</p>
 </div></span>
   
 </li>
@@ -302,10 +302,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Whether the attribute is required.</p>
+</div></span>
   
 </li>
 
@@ -313,7 +314,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#type-instance_method" title="#type (instance method)">#<strong>type</strong>  &#x21d2; Object </a>
+      <a href="#type-instance_method" title="#type (instance method)">#<strong>type</strong>  &#x21d2; Class, ... </a>
     
 
     
@@ -324,10 +325,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>The attribute type.</p>
+</div></span>
   
 </li>
 
@@ -335,7 +337,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#validate!-instance_method" title="#validate! (instance method)">#<strong>validate!</strong>  &#x21d2; Object </a>
+      <a href="#validate!-instance_method" title="#validate! (instance method)">#<strong>validate!</strong>  &#x21d2; void </a>
     
 
     
@@ -346,10 +348,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Validate the attribute.</p>
+</div></span>
   
 </li>
 
@@ -357,7 +360,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Object </a>
+      <a href="#value-instance_method" title="#value (instance method)">#<strong>value</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -368,10 +371,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>The attribute value (user provided or default).</p>
+</div></span>
   
 </li>
 
@@ -385,7 +389,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(owner, name, type, description = nil, **options)  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">Attribute</a></span></tt> 
+    #<strong>initialize</strong>(owner, name, type, description = nil, **options)  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></tt> 
   
 
   
@@ -393,13 +397,145 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Attribute.</p>
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>owner</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">ActiveInteractor::Context::Base</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the context object the attribute belongs to</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt>Class</tt>, <tt><span class='object_link'>ActiveInteractor::Type::Base</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute type</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>description</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute description</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>**options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:required</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>whether the attribute is required</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:default</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>NO_DEFAULT_VALUE</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>the attribute default value</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
 
 </div><table class="source_code">
   <tr>
@@ -407,24 +543,24 @@
       <pre class="lines">
 
 
-9
-10
-11
-12
-13
-14
-15
-16</pre>
+34
+35
+36
+37
+38
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
   <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
   <span class='ivar'>@type_expression</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
-  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'><span class='object_link'><a href="#NO_DEFAULT_VALUE-constant" title="ActiveInteractor::Context::Attribute::NO_DEFAULT_VALUE (constant)">NO_DEFAULT_VALUE</a></span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'>NO_DEFAULT_VALUE</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='ivar'>@error_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -442,7 +578,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="description-instance_method">
   
-    #<strong>description</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+    #<strong>description</strong>  &#x21d2; <tt>String</tt><sup>?</sup>  <span class="extras">(readonly)</span>
   
 
   
@@ -450,13 +586,34 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute description.</p>
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Returns the attribute description.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute description</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -464,15 +621,207 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 17</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
-  <span class='ivar'>@description</span>
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">Attribute</a></span></span>
+  <span class='comment'># Used when no default value is provided
+</span>  <span class='comment'># @visibility private
+</span>  <span class='comment'># @return [Symbol]
+</span>  <span class='const'>NO_DEFAULT_VALUE</span> <span class='op'>=</span> <span class='symbol'>:__no_default_value__</span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:description</span><span class='comma'>,</span> <span class='symbol'>:error_messages</span><span class='comma'>,</span> <span class='symbol'>:name</span>
+
+  <span class='comment'># Create a new instance of {ActiveInteractor::Context::Attribute}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param owner [ActiveInteractor::Context::Base] the context object the attribute belongs to
+</span>  <span class='comment'># @param name [String, Symbol] the attribute name
+</span>  <span class='comment'># @param type [Class, ActiveInteractor::Type::Base] the attribute type
+</span>  <span class='comment'># @param description [String, nil] the attribute description
+</span>  <span class='comment'># @param options [Hash] the attribute options
+</span>  <span class='comment'># @option options [Boolean] :required (false) whether the attribute is required
+</span>  <span class='comment'># @option options [Object] :default (NO_DEFAULT_VALUE) the attribute default value
+</span>  <span class='comment'># @return [ActiveInteractor::Context::Attribute]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='ivar'>@type_expression</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
+    <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'>NO_DEFAULT_VALUE</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@error_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Assign a value to the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param value [Object] the value to assign
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_assign_value'>assign_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute default value
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>NO_DEFAULT_VALUE</span>
+
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Whether the attribute is required
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_required?'>required?</span>
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute type
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Class, ActiveInteractor::Type::Base, Object]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@type_expression</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Validate the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
+    <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute value (user provided or default)
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>||</span> <span class='id identifier rubyid_default_value'>default_value</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+    <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_superclass'>superclass</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_required?'>required?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:blank</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>any</span><span class='words_sep'> </span><span class='tstring_content'>untyped</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -484,7 +833,7 @@
       <div class="method_details ">
   <h3 class="signature " id="error_messages-instance_method">
   
-    #<strong>error_messages</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+    #<strong>error_messages</strong>  &#x21d2; <tt>Array&lt;Symbol, String, nil&gt;</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -492,13 +841,34 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute error_messages.</p>
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Returns the attribute error messages.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol, String, nil&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute error messages</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -506,15 +876,207 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 17</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_error_messages'>error_messages</span>
-  <span class='ivar'>@error_messages</span>
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">Attribute</a></span></span>
+  <span class='comment'># Used when no default value is provided
+</span>  <span class='comment'># @visibility private
+</span>  <span class='comment'># @return [Symbol]
+</span>  <span class='const'>NO_DEFAULT_VALUE</span> <span class='op'>=</span> <span class='symbol'>:__no_default_value__</span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:description</span><span class='comma'>,</span> <span class='symbol'>:error_messages</span><span class='comma'>,</span> <span class='symbol'>:name</span>
+
+  <span class='comment'># Create a new instance of {ActiveInteractor::Context::Attribute}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param owner [ActiveInteractor::Context::Base] the context object the attribute belongs to
+</span>  <span class='comment'># @param name [String, Symbol] the attribute name
+</span>  <span class='comment'># @param type [Class, ActiveInteractor::Type::Base] the attribute type
+</span>  <span class='comment'># @param description [String, nil] the attribute description
+</span>  <span class='comment'># @param options [Hash] the attribute options
+</span>  <span class='comment'># @option options [Boolean] :required (false) whether the attribute is required
+</span>  <span class='comment'># @option options [Object] :default (NO_DEFAULT_VALUE) the attribute default value
+</span>  <span class='comment'># @return [ActiveInteractor::Context::Attribute]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='ivar'>@type_expression</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
+    <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'>NO_DEFAULT_VALUE</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@error_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Assign a value to the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param value [Object] the value to assign
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_assign_value'>assign_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute default value
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>NO_DEFAULT_VALUE</span>
+
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Whether the attribute is required
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_required?'>required?</span>
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute type
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Class, ActiveInteractor::Type::Base, Object]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@type_expression</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Validate the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
+    <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute value (user provided or default)
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>||</span> <span class='id identifier rubyid_default_value'>default_value</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+    <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_superclass'>superclass</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_required?'>required?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:blank</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>any</span><span class='words_sep'> </span><span class='tstring_content'>untyped</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -526,7 +1088,7 @@
       <div class="method_details ">
   <h3 class="signature " id="name-instance_method">
   
-    #<strong>name</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+    #<strong>name</strong>  &#x21d2; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -534,13 +1096,34 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute name.</p>
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Returns the attribute name.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -548,15 +1131,207 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 17</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
-  <span class='ivar'>@name</span>
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Attribute (class)">Attribute</a></span></span>
+  <span class='comment'># Used when no default value is provided
+</span>  <span class='comment'># @visibility private
+</span>  <span class='comment'># @return [Symbol]
+</span>  <span class='const'>NO_DEFAULT_VALUE</span> <span class='op'>=</span> <span class='symbol'>:__no_default_value__</span>
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:description</span><span class='comma'>,</span> <span class='symbol'>:error_messages</span><span class='comma'>,</span> <span class='symbol'>:name</span>
+
+  <span class='comment'># Create a new instance of {ActiveInteractor::Context::Attribute}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param owner [ActiveInteractor::Context::Base] the context object the attribute belongs to
+</span>  <span class='comment'># @param name [String, Symbol] the attribute name
+</span>  <span class='comment'># @param type [Class, ActiveInteractor::Type::Base] the attribute type
+</span>  <span class='comment'># @param description [String, nil] the attribute description
+</span>  <span class='comment'># @param options [Hash] the attribute options
+</span>  <span class='comment'># @option options [Boolean] :required (false) whether the attribute is required
+</span>  <span class='comment'># @option options [Object] :default (NO_DEFAULT_VALUE) the attribute default value
+</span>  <span class='comment'># @return [ActiveInteractor::Context::Attribute]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='ivar'>@type_expression</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>||</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:description</span><span class='rbracket'>]</span>
+    <span class='ivar'>@options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>required:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'>NO_DEFAULT_VALUE</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+    <span class='ivar'>@error_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Assign a value to the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param value [Object] the value to assign
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_assign_value'>assign_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute default value
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_default_value'>default_value</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>NO_DEFAULT_VALUE</span>
+
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Whether the attribute is required
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_required?'>required?</span>
+    <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute type
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Class, ActiveInteractor::Type::Base, Object]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
+    <span class='ivar'>@type_expression</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Validate the attribute
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
+    <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The attribute value (user provided or default)
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Object, nil]
+</span>  <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
+    <span class='ivar'>@user_provided_value</span> <span class='op'>||</span> <span class='id identifier rubyid_default_value'>default_value</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+    <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_superclass'>superclass</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'>Type</span><span class='op'>::</span><span class='const'>Base</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='id identifier rubyid_required?'>required?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:blank</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='qsymbols_beg'>%i[</span><span class='tstring_content'>any</span><span class='words_sep'> </span><span class='tstring_content'>untyped</span><span class='tstring_end'>]</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_type_is_a_active_interactor_type?'>type_is_a_active_interactor_type?</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+
+      <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_error_messages'>error_messages</span> <span class='op'>&lt;&lt;</span> <span class='symbol'>:invalid</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -573,24 +1348,57 @@
       <div class="method_details first">
   <h3 class="signature first" id="assign_value-instance_method">
   
-    #<strong>assign_value</strong>(value)  &#x21d2; <tt>Object</tt> 
+    #<strong>assign_value</strong>(value)  &#x21d2; <tt>void</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Assign a value to the attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the value to assign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_assign_value'>assign_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@user_provided_value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -603,29 +1411,56 @@
       <div class="method_details ">
   <h3 class="signature " id="default_value-instance_method">
   
-    #<strong>default_value</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>default_value</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>The attribute default value</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-22
-23
-24
-25
-26</pre>
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default_value'>default_value</span>
-  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#NO_DEFAULT_VALUE-constant" title="ActiveInteractor::Context::Attribute::NO_DEFAULT_VALUE (constant)">NO_DEFAULT_VALUE</a></span></span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'>NO_DEFAULT_VALUE</span>
 
   <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
@@ -645,7 +1480,12 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Whether the attribute is required</p>
+
 
   </div>
 </div>
@@ -671,12 +1511,12 @@
       <pre class="lines">
 
 
-28
-29
-30</pre>
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_required?'>required?</span>
   <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:required</span><span class='rbracket'>]</span>
@@ -689,24 +1529,51 @@
       <div class="method_details ">
   <h3 class="signature " id="type-instance_method">
   
-    #<strong>type</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>type</strong>  &#x21d2; <tt>Class</tt>, ... 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>The attribute type</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Class</tt>, <tt><span class='object_link'>ActiveInteractor::Type::Base</span></tt>, <tt>Object</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-32
-33
-34</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@type_expression</span>
@@ -719,27 +1586,43 @@
       <div class="method_details ">
   <h3 class="signature " id="validate!-instance_method">
   
-    #<strong>validate!</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>validate!</strong>  &#x21d2; <tt>void</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Validate the attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
-  <span class='id identifier rubyid_validate_presence!'>validate_presence!</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_validate_type!'>validate_type!</span>
+  <span class='id identifier rubyid_validate_presence!'>validate_presence!</span>
+  <span class='id identifier rubyid_validate_type!'>validate_type!</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -749,24 +1632,51 @@
       <div class="method_details ">
   <h3 class="signature " id="value-instance_method">
   
-    #<strong>value</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>value</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>The attribute value (user provided or default)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-40
-41
-42</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_value'>value</span>
   <span class='ivar'>@user_provided_value</span> <span class='op'>||</span> <span class='id identifier rubyid_default_value'>default_value</span>
@@ -781,7 +1691,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:39 2023 by
+  Generated on Mon Nov  6 19:37:13 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

@@ -119,6 +119,8 @@ Pattern for Ruby with ActiveModel::Validations inspired by the interactor gem.
 It has features like rich support for attributes, callbacks, and validations, and
 thread safe performance methods.</p>
 
+<p><a href="https://activeinteractor.org/getting-started" target="_parent" title="Getting Started">Getting Started</a></p>
+
 <p><a href="file.CHANGELOG.html" title="Changelog">Changelog</a></p>
 
 <p><a href="file.HUMANS.html" title="Acknowledgements">Acknowledgements</a></p>
@@ -130,6 +132,69 @@ thread safe performance methods.</p>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Create an interactor</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>CreateUser</span> <span class='op'>&lt;</span> <span class='const'>ActiveInteractor</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ActiveInteractor/Interactor.html" title="ActiveInteractor::Interactor (module)">Interactor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="ActiveInteractor/Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">Base</a></span></span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User login</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password_confirmation</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User password confirmation</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:first_name</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User first name</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:last_name</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User last name</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='id identifier rubyid_returns'>returns</span> <span class='symbol'>:user</span><span class='comma'>,</span> <span class='const'>User</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The created User</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+
+  <span class='id identifier rubyid_input_validates'>input_validates</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='label'>confirmation:</span> <span class='kw'>true</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_interact'>interact</span>
+    <span class='id identifier rubyid_create_user!'>create_user!</span>
+    <span class='id identifier rubyid_create_user_profile!'>create_user_profile!</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_rollback'>rollback</span>
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='op'>&amp;</span><span class='id identifier rubyid_destroy'>destroy</span>
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user_profile'>user_profile</span><span class='op'>&amp;.</span><span class='id identifier rubyid_destroy'>destroy</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_private'>private</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_create_user!'>create_user!</span>
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_login'>login</span><span class='comma'>,</span> <span class='label'>password:</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_password'>password</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I created a user!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>def</span> <span class='id identifier rubyid_create_user_profile!'>create_user_profile!</span>
+    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user_profile'>user_profile</span> <span class='op'>=</span> <span class='const'>UserProfile</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+      <span class='label'>user:</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='comma'>,</span>
+      <span class='label'>first_name:</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_first_name'>first_name</span><span class='comma'>,</span>
+      <span class='label'>last_name:</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_last_name'>last_name</span>
+    <span class='rparen'>)</span>
+    <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user_profile'>user_profile</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user_profile'>user_profile</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I created a user profile!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I created a user!</span><span class='tstring_end'>&quot;</span></span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I created a user profile!</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+<span class='comment'>#=&gt; true
+</span><span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span>
+<span class='comment'>#=&gt; &lt;#User @login=&#39;hello@aaronmallen&#39;&gt;
+</span>
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>notpassword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+<span class='comment'>#=&gt; false
+</span><span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span>
+<span class='comment'>#=&gt; [&quot;Password confirmation doesn&#39;t match Password&quot;]</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Author:</p>
 <ul class="author">
   
@@ -171,7 +236,7 @@ thread safe performance methods.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:37 2023 by
+  Generated on Mon Nov  6 19:37:45 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

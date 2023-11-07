@@ -89,7 +89,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="AttributeAssignment.html" title="ActiveInteractor::Context::AttributeAssignment (module)">AttributeAssignment</a></span>, <span class='object_link'><a href="AttributeRegistration.html" title="ActiveInteractor::Context::AttributeRegistration (module)">AttributeRegistration</a></span>, ActiveModel::Validations</dd>
+      <dd><span class='object_link'><a href="AttributeAssignment.html" title="ActiveInteractor::Context::AttributeAssignment (module)">AttributeAssignment</a></span>, <span class='object_link'><a href="AttributeRegistration.html" title="ActiveInteractor::Context::AttributeRegistration (module)">AttributeRegistration</a></span></dd>
   </dl>
   
   
@@ -154,10 +154,10 @@
 </li>
 
       
-        <li class="protected ">
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#validate_attributes!-instance_method" title="#validate_attributes! (instance method)">#<strong>validate_attributes!</strong>  &#x21d2; Object </a>
+      <a href="#validate!-instance_method" title="#validate! (instance method)">#<strong>validate!</strong>  &#x21d2; Object </a>
     
 
     
@@ -165,7 +165,7 @@
   
   
   
-  <span class="note title protected">protected</span>
+  
   
   
   
@@ -217,7 +217,6 @@
   
   
   
-  
   <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -246,13 +245,13 @@
       <pre class="lines">
 
 
-14
-15
-16
-17</pre>
+11
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/base.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/base.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -281,9 +280,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="validate_attributes!-instance_method">
+  <h3 class="signature first" id="validate!-instance_method">
   
-    #<strong>validate_attributes!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(protected)</span>
+    #<strong>validate!</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -295,17 +294,17 @@
       <pre class="lines">
 
 
-21
-22
-23
-24
-25
-26</pre>
+16
+17
+18
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/base.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/base.rb', line 16</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_validate_attributes!'>validate_attributes!</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
   <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span>
     <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_validate!'>validate!</span>
     <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_error_messages'>error_messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -321,7 +320,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:42 2023 by
+  Generated on Mon Nov  6 19:37:51 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

@@ -569,7 +569,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <span class='kw'>when</span> <span class='const'>String</span>
         <span class='lbrace'>{</span> <span class='label'>generic:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_errors'>errors</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
       <span class='kw'>when</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Errors</span>
-        <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+        <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span>
       <span class='kw'>else</span>
         <span class='id identifier rubyid_errors'>errors</span>
       <span class='kw'>end</span>
@@ -606,7 +606,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 
   <span class='comment'># @private
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_read_attribute_for_validation'>read_attribute_for_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_data'>data</span><span class='op'>&amp;.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a success
@@ -901,7 +901,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <span class='kw'>when</span> <span class='const'>String</span>
         <span class='lbrace'>{</span> <span class='label'>generic:</span> <span class='lbracket'>[</span><span class='id identifier rubyid_errors'>errors</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
       <span class='kw'>when</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Errors</span>
-        <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+        <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span>
       <span class='kw'>else</span>
         <span class='id identifier rubyid_errors'>errors</span>
       <span class='kw'>end</span>
@@ -938,7 +938,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 
   <span class='comment'># @private
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_read_attribute_for_validation'>read_attribute_for_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_data'>data</span><span class='op'>&amp;.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a success
@@ -1302,7 +1302,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:42 2023 by
+  Generated on Mon Nov  6 19:37:52 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

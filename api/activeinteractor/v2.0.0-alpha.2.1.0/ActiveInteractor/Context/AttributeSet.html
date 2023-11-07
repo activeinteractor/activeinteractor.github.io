@@ -62,7 +62,7 @@
       <div id="content"><h1>Class: ActiveInteractor::Context::AttributeSet
   
   
-  
+  <span class="private note title">Private</span>
 </h1>
 <div class="box_info">
   
@@ -99,7 +99,21 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This class is part of a private API.</strong>
+  You should avoid using this class if possible, as it may be removed or be changed in the future.
+</p>
+<p>A set of <span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">attributes</a></span></p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -117,7 +131,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(*attribute_args)  &#x21d2; Object </a>
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(*attribute_args)  &#x21d2; ActiveInteractor::Context::Attribute </a>
     
 
     
@@ -128,10 +142,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Add an attribute to the set.</p>
+</div></span>
   
 </li>
 
@@ -139,7 +154,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attribute_names-instance_method" title="#attribute_names (instance method)">#<strong>attribute_names</strong>  &#x21d2; Object </a>
+      <a href="#attribute_names-instance_method" title="#attribute_names (instance method)">#<strong>attribute_names</strong>  &#x21d2; Array&lt;Symbol&gt; </a>
     
 
     
@@ -150,10 +165,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>The attribute names in the set.</p>
+</div></span>
   
 </li>
 
@@ -161,7 +177,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#attributes-instance_method" title="#attributes (instance method)">#<strong>attributes</strong>  &#x21d2; Object </a>
+      <a href="#attributes-instance_method" title="#attributes (instance method)">#<strong>attributes</strong>  &#x21d2; Array&lt;ActiveInteractor::Context::Attribute&gt; </a>
     
 
     
@@ -172,10 +188,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>The attributes in the set.</p>
+</div></span>
   
 </li>
 
@@ -183,7 +200,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(attribute_name)  &#x21d2; Object </a>
+      <a href="#find-instance_method" title="#find (instance method)">#<strong>find</strong>(attribute_name)  &#x21d2; ActiveInteractor::Context::Attribute<sup>?</sup> </a>
     
 
     
@@ -194,10 +211,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Find an attribute by name.</p>
+</div></span>
   
 </li>
 
@@ -205,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(owner, *attributes)  &#x21d2; AttributeSet </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(owner, *attributes)  &#x21d2; ActiveInteractor::Context::AttributeSet </a>
     
 
     
@@ -218,10 +236,10 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of AttributeSet.</p>
+    <span class="summary_desc"><div class='inline'><p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::AttributeSet (class)">AttributeSet</a></span>.</p>
 </div></span>
   
 </li>
@@ -230,7 +248,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#merge-instance_method" title="#merge (instance method)">#<strong>merge</strong>(attributes)  &#x21d2; Object </a>
+      <a href="#merge-instance_method" title="#merge (instance method)">#<strong>merge</strong>(attributes)  &#x21d2; void </a>
     
 
     
@@ -241,10 +259,11 @@
   
   
   
-  
+  <span class="private note title">private</span>
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Merge attributes into the set.</p>
+</div></span>
   
 </li>
 
@@ -258,7 +277,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(owner, *attributes)  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::AttributeSet (class)">AttributeSet</a></span></tt> 
+    #<strong>initialize</strong>(owner, *attributes)  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::AttributeSet (class)">ActiveInteractor::Context::AttributeSet</a></span></tt> 
   
 
   
@@ -266,13 +285,51 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of AttributeSet.</p>
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::AttributeSet (class)">ActiveInteractor::Context::AttributeSet</a></span></p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>owner</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">ActiveInteractor::Context::Base</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the context object the set belongs to</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attributes to add to the set</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -280,14 +337,14 @@
       <pre class="lines">
 
 
-6
-7
-8
-9
-10</pre>
+14
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
   <span class='ivar'>@owner</span> <span class='op'>=</span> <span class='id identifier rubyid_owner'>owner</span>
@@ -309,26 +366,73 @@
       <div class="method_details first">
   <h3 class="signature first" id="add-instance_method">
   
-    #<strong>add</strong>(*attribute_args)  &#x21d2; <tt>Object</tt> 
+    #<strong>add</strong>(*attribute_args)  &#x21d2; <tt><span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Add an attribute to the set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute_args</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Object&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute arguments
+see <span class='object_link'><a href="Attribute.html#initialize-instance_method" title="ActiveInteractor::Context::Attribute#initialize (method)">ActiveInteractor::Context::Attribute#initialize</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-12
-13
-14
-15
-16</pre>
+25
+26
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attribute_options'>attribute_options</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='period'>.</span><span class='id identifier rubyid_extract_options!'>extract_options!</span>
@@ -343,24 +447,51 @@
       <div class="method_details ">
   <h3 class="signature " id="attribute_names-instance_method">
   
-    #<strong>attribute_names</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>attribute_names</strong>  &#x21d2; <tt>Array&lt;Symbol&gt;</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>The attribute names in the set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attribute_names'>attribute_names</span>
   <span class='ivar'>@set</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -373,24 +504,51 @@
       <div class="method_details ">
   <h3 class="signature " id="attributes-instance_method">
   
-    #<strong>attributes</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>attributes</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>The attributes in the set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-22
-23
-24</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
   <span class='ivar'>@set</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
@@ -403,24 +561,70 @@
       <div class="method_details ">
   <h3 class="signature " id="find-instance_method">
   
-    #<strong>find</strong>(attribute_name)  &#x21d2; <tt>Object</tt> 
+    #<strong>find</strong>(attribute_name)  &#x21d2; <tt><span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></tt><sup>?</sup> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Find an attribute by name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-26
-27
-28</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
   <span class='ivar'>@set</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
@@ -433,24 +637,57 @@
       <div class="method_details ">
   <h3 class="signature " id="merge-instance_method">
   
-    #<strong>merge</strong>(attributes)  &#x21d2; <tt>Object</tt> 
+    #<strong>merge</strong>(attributes)  &#x21d2; <tt>void</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Merge attributes into the set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attributes to merge</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-30
-31
-32</pre>
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/attribute_set.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span> <span class='ivar'>@set</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span> <span class='rbrace'>}</span>
@@ -465,7 +702,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:39 2023 by
+  Generated on Mon Nov  6 19:37:13 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

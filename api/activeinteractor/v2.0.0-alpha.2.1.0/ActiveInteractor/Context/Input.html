@@ -101,7 +101,37 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The base class for input context objects</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Create an input context class and use it in an interactor</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>CreateUserInput</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Context.html" title="ActiveInteractor::Context (module)">Context</a></span></span><span class='op'>::</span><span class='const'>Input</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User login</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+<span class='kw'>end</span>
+
+<span class='kw'>class</span> <span class='const'>CreateUser</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Interactor.html" title="ActiveInteractor::Interactor (module)">Interactor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">Base</a></span></span>
+  <span class='id identifier rubyid_accepts_arguments_matching'>accepts_arguments_matching</span> <span class='const'>CreateUserInput</span>
+
+  <span class='id identifier rubyid_returns'>returns</span> <span class='symbol'>:user</span><span class='comma'>,</span> <span class='const'>User</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The created User</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div>
 
 
   <h2>Constant Summary</h2>
@@ -110,6 +140,39 @@
      from <span class='object_link'>Type::DeclerationMethods</span></h3>
   <p class="inherited"><span class='object_link'><a href="../Type/DeclerationMethods.html#Boolean-constant" title="ActiveInteractor::Type::DeclerationMethods::Boolean (constant)">Type::DeclerationMethods::Boolean</a></span></p>
 
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">#<strong>errors</strong>  &#x21d2; ActiveModel::Errors </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The context errors.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
 
 
 
@@ -125,7 +188,76 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#argument-class_method" title="argument (class method)">.<strong>argument</strong>(*attribute_args)  &#x21d2; Object </a>
+      <a href="#argument-class_method" title="argument (class method)">.<strong>argument</strong>(*attribute_args)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add an argument <span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">attribute</a></span> to the context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#argument_names-class_method" title="argument_names (class method)">.<strong>argument_names</strong>  &#x21d2; Array&lt;Symbol&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The argument names.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#arguments-class_method" title="arguments (class method)">.<strong>arguments</strong>  &#x21d2; Array&lt;ActiveInteractor::Context::Attribute&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The <span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">arguments</a></span> of the context.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attribute_method%3F-class_method" title="attribute_method? (class method)">.<strong>attribute_method?</strong>(attribute)  &#x21d2; Object </a>
     
 
     
@@ -147,7 +279,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#argument_names-class_method" title="argument_names (class method)">.<strong>argument_names</strong>  &#x21d2; Object </a>
+      <a href="#clear_validators!-class_method" title="clear_validators! (class method)">.<strong>clear_validators!</strong>  &#x21d2; Object </a>
     
 
     
@@ -169,7 +301,280 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#arguments-class_method" title="arguments (class method)">.<strong>arguments</strong>  &#x21d2; Object </a>
+      <a href="#validate-class_method" title="validate (class method)">.<strong>validate</strong>(*args, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validates-class_method" title="validates (class method)">.<strong>validates</strong>(*attributes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validates!-class_method" title="validates! (class method)">.<strong>validates!</strong>(*attributes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validates_each-class_method" title="validates_each (class method)">.<strong>validates_each</strong>(*attr_names, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validates_with-class_method" title="validates_with (class method)">.<strong>validates_with</strong>(*args, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validators-class_method" title="validators (class method)">.<strong>validators</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validators_on-class_method" title="validators_on (class method)">.<strong>validators_on</strong>(*attributes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invalid%3F-instance_method" title="#invalid? (instance method)">#<strong>invalid?</strong>(context = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid%3F-instance_method" title="#valid? (instance method)">#<strong>valid?</strong>(context = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">#<strong>validate</strong>(context = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate!-instance_method" title="#validate! (instance method)">#<strong>validate!</strong>(context = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validates_with-instance_method" title="#validates_with (instance method)">#<strong>validates_with</strong>(*args, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validation_context-instance_method" title="#validation_context (instance method)">#<strong>validation_context</strong>  &#x21d2; Object </a>
     
 
     
@@ -210,7 +615,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="AttributeAssignment.html" title="ActiveInteractor::Context::AttributeAssignment (module)">AttributeAssignment</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="AttributeAssignment.html#[]-instance_method" title="ActiveInteractor::Context::AttributeAssignment#[] (method)">#[]</a></span>, <span class='object_link'><a href="AttributeAssignment.html#[]=-instance_method" title="ActiveInteractor::Context::AttributeAssignment#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="AttributeAssignment.html#assign_attribute_value-instance_method" title="ActiveInteractor::Context::AttributeAssignment#assign_attribute_value (method)">#assign_attribute_value</a></span>, <span class='object_link'><a href="AttributeAssignment.html#assignment_method_missing-instance_method" title="ActiveInteractor::Context::AttributeAssignment#assignment_method_missing (method)">#assignment_method_missing</a></span>, <span class='object_link'><a href="AttributeAssignment.html#initialize-instance_method" title="ActiveInteractor::Context::AttributeAssignment#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="AttributeAssignment.html#method_missing-instance_method" title="ActiveInteractor::Context::AttributeAssignment#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="AttributeAssignment.html#read_attribute_value-instance_method" title="ActiveInteractor::Context::AttributeAssignment#read_attribute_value (method)">#read_attribute_value</a></span>, <span class='object_link'><a href="AttributeAssignment.html#respond_to_missing%3F-instance_method" title="ActiveInteractor::Context::AttributeAssignment#respond_to_missing? (method)">#respond_to_missing?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="AttributeAssignment.html#[]-instance_method" title="ActiveInteractor::Context::AttributeAssignment#[] (method)">#[]</a></span>, <span class='object_link'><a href="AttributeAssignment.html#[]=-instance_method" title="ActiveInteractor::Context::AttributeAssignment#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="AttributeAssignment.html#initialize-instance_method" title="ActiveInteractor::Context::AttributeAssignment#initialize (method)">#initialize</a></span></p>
 
   
   
@@ -219,11 +624,6 @@
   
   
   
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="AttributeRegistration.html" title="ActiveInteractor::Context::AttributeRegistration (module)">AttributeRegistration</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="AttributeRegistration.html#attribute_set-instance_method" title="ActiveInteractor::Context::AttributeRegistration#attribute_set (method)">#attribute_set</a></span></p>
-
   
   
   
@@ -243,11 +643,156 @@
   <p class="notice super">
     This class handles dynamic methods through the <tt>method_missing</tt> method
     
-      in the class <span class='object_link'><a href="AttributeAssignment.html#method_missing-instance_method" title="ActiveInteractor::Context::AttributeAssignment#method_missing (method)">ActiveInteractor::Context::AttributeAssignment</a></span>
+      in the class <span class='object_link'>ActiveInteractor::Context::AttributeAssignment</span>
     
   </p>
   
 </div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="errors-instance_method">
+  
+    #<strong>errors</strong>  &#x21d2; <tt>ActiveModel::Errors</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the context errors.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ActiveModel::Errors</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the context errors</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://github.com/rails/rails/blob/main/activemodel/lib/active_model/errors.rb" target="_parent" title="ActiveModel::Errors">ActiveModel::Errors</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 
   <div id="class_method_details" class="method_details_list">
@@ -257,24 +802,66 @@
       <div class="method_details first">
   <h3 class="signature first" id="argument-class_method">
   
-    .<strong>argument</strong>(*attribute_args)  &#x21d2; <tt>Object</tt> 
+    .<strong>argument</strong>(*attribute_args)  &#x21d2; <tt>void</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Add an argument <span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">attribute</a></span> to the context</p>
+
+<p>see <span class='object_link'><a href="Attribute.html#initialize-instance_method" title="ActiveInteractor::Context::Attribute#initialize (method)">Attribute#initialize</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>CreateUserInput</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Context.html" title="ActiveInteractor::Context (module)">Context</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User login</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute_args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the attribute arguments</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-6
-7
-8</pre>
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
@@ -287,24 +874,61 @@
       <div class="method_details ">
   <h3 class="signature " id="argument_names-class_method">
   
-    .<strong>argument_names</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>argument_names</strong>  &#x21d2; <tt>Array&lt;Symbol&gt;</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The argument names</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>CreateUserInput</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Context.html" title="ActiveInteractor::Context (module)">Context</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User login</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The User password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
+<span class='kw'>end</span>
+
+<span class='const'>CreateUserInput</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+<span class='comment'>#=&gt; [:login, :password]</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-10
-11
-12</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
   <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
@@ -317,27 +941,1856 @@
       <div class="method_details ">
   <h3 class="signature " id="arguments-class_method">
   
-    .<strong>arguments</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>arguments</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The <span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">arguments</a></span> of the context</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Attribute.html" title="ActiveInteractor::Context::Attribute (class)">ActiveInteractor::Context::Attribute</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-14
-15
-16</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
   <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="attribute_method?-class_method">
+  
+    .<strong>attribute_method?</strong>(attribute)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-attribute_method-3F" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#attribute_method?">ActiveModel::AttributeMethods::ClassMethods#attribute_method?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_validators!-class_method">
+  
+    .<strong>clear_validators!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-clear_validators-21" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#clear_validators!">ActiveModel::AttributeMethods::ClassMethods#clear_validators!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-class_method">
+  
+    .<strong>validate</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validate" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validate">ActiveModel::AttributeMethods::ClassMethods#validate</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validates-class_method">
+  
+    .<strong>validates</strong>(*attributes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validates">ActiveModel::AttributeMethods::ClassMethods#validates</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validates!-class_method">
+  
+    .<strong>validates!</strong>(*attributes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates-21" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validates!">ActiveModel::AttributeMethods::ClassMethods#validates!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validates_each-class_method">
+  
+    .<strong>validates_each</strong>(*attr_names, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates_each" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validates_each">ActiveModel::AttributeMethods::ClassMethods#validates_each</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validates_with-class_method">
+  
+    .<strong>validates_with</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates_with" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validates_with">ActiveModel::AttributeMethods::ClassMethods#validates_with</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validators-class_method">
+  
+    .<strong>validators</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validators" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validators">ActiveModel::AttributeMethods::ClassMethods#validators</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validators_on-class_method">
+  
+    .<strong>validators_on</strong>(*attributes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validators_on" target="_parent" title="ActiveModel::AttributeMethods::ClassMethods#validators_on">ActiveModel::AttributeMethods::ClassMethods#validators_on</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="invalid?-instance_method">
+  
+    #<strong>invalid?</strong>(context = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-invalid-3F" target="_parent" title="ActiveModel::Validations#invalid?">ActiveModel::Validations#invalid?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid?-instance_method">
+  
+    #<strong>valid?</strong>(context = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-valid-3F" target="_parent" title="ActiveModel::Validations#valid?">ActiveModel::Validations#valid?</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    #<strong>validate</strong>(context = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-validate" target="_parent" title="ActiveModel::Validations#validate">ActiveModel::Validations#validate</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate!-instance_method">
+  
+    #<strong>validate!</strong>(context = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-validate-21" target="_parent" title="ActiveModel::Validations#validate!">ActiveModel::Validations#validate!</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validates_with-instance_method">
+  
+    #<strong>validates_with</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-validates_with" target="_parent" title="ActiveModel::Validations#validates_with">ActiveModel::Validations#validates_with</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validation_context-instance_method">
+  
+    #<strong>validation_context</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html#method-i-validation_context" target="_parent" title="ActiveModel::Validations#validation_context">ActiveModel::Validations#validation_context</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/input.rb', line 92</span>
+
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Context::Input (class)">Input</a></span></span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="Base.html" title="ActiveInteractor::Context::Base (class)">Base</a></span></span>
+  <span class='comment'># Add an argument {ActiveInteractor::Context::Attribute attribute} to the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'># see {ActiveInteractor::Context::Attribute#initialize}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param attribute_args [Array] the attribute arguments
+</span>  <span class='comment'># @return [void]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument'>argument</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_attribute_args'>attribute_args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The argument names
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  class CreateUserInput &lt; ActiveInteractor::Context::Input
+</span>  <span class='comment'>#    argument :login, String, &#39;The User login&#39;, required: true
+</span>  <span class='comment'>#    argument :password, String, &#39;The User password&#39;, required: true
+</span>  <span class='comment'>#  end
+</span>  <span class='comment'>#
+</span>  <span class='comment'>#  CreateUserInput.argument_names
+</span>  <span class='comment'>#  #=&gt; [:login, :password]
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;Symbol&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_argument_names'>argument_names</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attribute_names'>attribute_names</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># The {ActiveInteractor::Context::Attribute arguments} of the context
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Array&lt;ActiveInteractor::Context::Attribute&gt;]
+</span>  <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arguments'>arguments</span>
+    <span class='id identifier rubyid_attribute_set'>attribute_set</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -349,7 +2802,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Nov  2 23:27:38 2023 by
+  Generated on Mon Nov  6 19:37:12 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>
