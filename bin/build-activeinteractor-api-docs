@@ -5,7 +5,7 @@ bundle install
 
 mkdir -p ../api/activeinteractor
 echo "\033[0;36m==> Buidling Docs for activeinteractor/activeinteractor main\033[0m"
-bundle exec yard -o ../api/activeinteractor
+SITEMAP_BASEURL=https://activeinteractor.org bundle exec yard -o ../api/activeinteractor
 
 git_tags=$(git tag)
 for tag in $git_tags
@@ -14,7 +14,7 @@ do
   mkdir -p ../api/activeinteractor/${tag}
   rm -rf .yardoc
   git checkout ${tag}
-  bundle exec yard -o ../api/activeinteractor/${tag}
+  SITEMAP_BASEURL=https://activeinteractor.org bundle exec yard -o ../api/activeinteractor/${tag}
 done
 
 cd ..

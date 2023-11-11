@@ -1,6 +1,9 @@
 ---
-- href: /getting-started
+- href: /docs/getting-started
   text: Getting Started
+
+- href: /guides
+  text: Guides
 
 - href: /api/activeinteractor
   text: API

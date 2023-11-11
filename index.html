@@ -1,21 +1,19 @@
 ---
-title: ActiveInteractor
 layout: home
 logo_variant: white
 ---
-<div class='hero is-primary'>
-  <header class="hero-head">
-    {% include main-nav.html %}
-  </header>
-  <div class="hero-body">
-    <h1 class="is-sr-only">ActiveInteractor</h1>
-    <img src="/assets/images/logo_white.png" alt="ActiveInteractor"/>
+<div class="h-screen w-full flex flex-col space-y-16">
+  <div class="max-h-1/2 w-full bg-bulma-green">
+    <header>
+      {% include main-nav.html %}
+    </header>
+    <div class="flex flex-col justify-center items-center h-full">
+      <h1 class="sr-only">ActiveInteractor</h1>
+      <img src="/assets/images/logo_white.png" alt="ActiveInteractor"/>
+    </div>
   </div>
-</div>
-
-<main class="container my-6">
-  <div class="content">
-    <div class="block">
+  <main class="max-w-[1344px] mx-auto my-[16px] flex flex-col space-y-8 prose-a:text-bulma-green">
+    <div class="block flex flex-col space-y-4">
       <p>
         ActiveInteractor is an implementation of the <a href="https://en.wikipedia.org/wiki/Command_pattern" target="_blank">command pattern</a> for Ruby with <a href="https://api.rubyonrails.org/classes/ActiveModel/Validations.html" target="_blank">ActiveModel::Validations</a>
         inspired by the <a href="https://github.com/collectiveidea/interactor" target="_blank">interactor gem</a>. Rich support for attributes, callbacks, and validations, and thread safe performance methods.
@@ -24,10 +22,11 @@ logo_variant: white
         Reduce controller bloat with procedural service objects.
       </p>
     </div>
-    <hr />
-    <div class="block">
-      <h2 class="title">Features</h2>
-      <ul>
+    {% divider %}
+    <div class="block flex flex-col space-y-4">
+      <!-- <h2 class="text-2xl font-bold">Features</h2> -->
+      {% heading Features | size: 2 %}
+      <ul class="list-disc">
         {% for feature in site.data.features %}
           {% if feature.href %}
           <li>
@@ -39,9 +38,9 @@ logo_variant: white
         {% endfor %}
       </ul>
     </div>
-    <hr />
-    <div class="block">
-      <h2>Install</h2>
+    {% divider %}
+    <div class="block flex flex-col space-y-4">
+      {% heading Install | size: 2 %}
       <p>
         Add this line to your application's Gemfile:
 
@@ -55,15 +54,11 @@ logo_variant: white
         </figure>
       </p>
     </div>
-    <hr />
-    <div class="block">
-      <h2>License</h2>
+    {% divider %}
+    <div class="block flex flex-col space-y-4">
+      {% heading License | size: 2 %}
       <p>The gem is available as open source under the terms of the <a href="https://opensource.org/license/mit/">MIT License</a>.</p>
     </div>
-  </div>
-</main>
-
-<footer class="footer">
+  </main>
   {% include footer.html %}
-</footer>
-
+</div>

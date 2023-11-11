@@ -28,6 +28,15 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.5
+          cache: npm
+      - name: Build Artifacts
+        run: |
+          npm install
+          npm run build:css
       - name: Build docs
         run: bundle exec jekyll build
       - name: Setup Pages

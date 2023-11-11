@@ -69,3 +69,22 @@ figure.highlight {
   margin-right: 0;
   text-align: left;
 }
+
+pre {
+  overflow-x: auto;
+  padding: 1.25em 1.5em;
+  white-space: pre;
+  word-wrap: normal;
+
+  code {
+    background-color: transparent;
+  }
+}
+
+code {
+  background-color: #fafafa;
+  color: #da1039;
+  font-size: .875em;
+  font-weight: 400;
+  padding: .25em .5em .25em;
+}

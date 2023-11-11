@@ -1,7 +1,4 @@
 ---
-- text: Context Validation
-  href: https://github.com/aaronmallen/activeinteractor/wiki/Context#validating-the-context
+- text: Self Documenting
+- text: Argument Validation
 - text: Callbacks
-  href: https://github.com/aaronmallen/activeinteractor/wiki/Callbacks
-- text: Thread Safety
-- text: Organizers

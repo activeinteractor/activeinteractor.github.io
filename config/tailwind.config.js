@@ -1,0 +1,60 @@
+module.exports = {
+  mode: 'jit',
+  content: [
+    './_drafts/**/*.html',
+    './_includes/**/*.html',
+    './_layouts/**/*.html',
+    './_posts/*.md',
+    './docs/**/*.md',
+    './*.md',
+    './*.html',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'bulma-green': {
+          50: 'lighten(#00d1b2, 10%)',
+          100: 'lighten(#00d1b2, 8%)',
+          200: 'lighten(#00d1b2, 6%)',
+          300: 'lighten(#00d1b2, 4%)',
+          400: 'lighten(#00d1b2, 2%)',
+          DEFAULT: '#00d1b2',
+          500: '#00d1b2',
+          600: 'darken(#00d1b2, 2%)',
+          700: 'darken(#00d1b2, 4%)',
+          800: 'darken(#00d1b2, 6%)',
+          900: 'darken(#00d1b2, 8%)',
+        },
+      },
+      fontFamily: {
+        poppins: [
+          'Poppins',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+        ],
+        body: [
+          'Poppins',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+        ],
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+}
