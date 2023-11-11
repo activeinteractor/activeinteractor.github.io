@@ -4,6 +4,12 @@
     - subject: Context
       description: Understanding Context Basics
       href: /docs/context/understanding-context
+    - subject: Context Attributes
+      description: Defining Context Attributes
+      href: /docs/context/defining-context-attributes
+    - subject: Context Validation
+      description: Validating Contexts
+      href: /docs/context/context-validation
     - subject: Reusable Contexts
       description: Abstracting Contexts for Reuse
       href: /docs/context/reusable-context
