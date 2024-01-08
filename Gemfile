@@ -22,7 +22,7 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.19'
   gem 'rubocop-jekyll', '~> 0.13'
   gem 'rubocop-rake', '~> 0.6'
-  gem 'rubocop-rspec', '~> 2.25'
+  gem 'rubocop-rspec', '~> 2.26'
   gem 'rubocop-yard', '~> 0.9'
 end
 
