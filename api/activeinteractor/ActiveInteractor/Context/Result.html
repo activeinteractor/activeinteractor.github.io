@@ -62,7 +62,7 @@
       <div id="content"><h1>Class: ActiveInteractor::Context::Result
   
   
-  <span class="private note title">Private</span>
+  
 </h1>
 <div class="box_info">
   
@@ -99,27 +99,66 @@
   
 </div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    <p class="note private">
-  <strong>This class is part of a private API.</strong>
-  You should avoid using this class if possible, as it may be removed or be changed in the future.
-</p>
-<p>The base class for result context objects returned in <span class='object_link'><a href="../Result.html#data-instance_method" title="ActiveInteractor::Result#data (method)">Result#data</a></span></p>
 
 
-  </div>
-</div>
-<div class="tags">
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#for_output_context-class_method" title="for_output_context (class method)">.<strong>for_output_context</strong>(owner, context)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
   
 
-</div>
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
 
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_owner-class_method" title="register_owner (class method)">.<strong>register_owner</strong>(owner)  &#x21d2; Object </a>
+    
 
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
 
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
 
-
-
+      
+    </ul>
   
     <h2>
       Instance Method Summary
@@ -131,7 +170,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>  &#x21d2; Object </a>
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(*args, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -145,8 +184,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>read an attribute by key.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -154,7 +192,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_json-instance_method" title="#as_json (instance method)">#<strong>as_json</strong>  &#x21d2; Hash </a>
+      <a href="#as_json-instance_method" title="#as_json (instance method)">#<strong>as_json</strong>(*args, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -168,8 +206,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The context as a json hash.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -177,7 +214,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(attributes = {})  &#x21d2; ActiveInteractor::Context::Result </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(attributes = {})  &#x21d2; Result </a>
     
 
     
@@ -190,10 +227,10 @@
   
   
   
-  <span class="private note title">private</span>
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::Result (class)">Result</a></span> and assign attributes.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Result.</p>
 </div></span>
   
 </li>
@@ -202,7 +239,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Hash </a>
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Object </a>
     
 
     
@@ -215,11 +252,10 @@
   
   
   
-  <span class="private note title">private</span>
+  
 
   
-    <span class="summary_desc"><div class='inline'><p>The context as a hash.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -227,7 +263,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>  &#x21d2; String </a>
+      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>(*args, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -241,8 +277,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The context as a json string.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -256,7 +291,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(attributes = {})  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span></tt> 
+    #<strong>initialize</strong>(attributes = {})  &#x21d2; <tt><span class='object_link'><a href="" title="ActiveInteractor::Context::Result (class)">Result</a></span></tt> 
   
 
   
@@ -264,38 +299,13 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note private">
-  <strong>This method is part of a private API.</strong>
-  You should avoid using this method if possible, as it may be removed or be changed in the future.
-</p>
-<p>Create a new instance of <span class='object_link'><a href="" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span> and assign attributes</p>
+    <p>Returns a new instance of Result.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>attributes</span>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>attribute values</p>
-</div>
-      
-    </li>
-  
-</ul>
-
 
 </div><table class="source_code">
   <tr>
@@ -303,16 +313,16 @@
       <pre class="lines">
 
 
-52
-53
-54
-55
-56
-57
-58</pre>
+19
+20
+21
+22
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -329,6 +339,74 @@
 </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="for_output_context-class_method">
+  
+    .<strong>for_output_context</strong>(owner, context)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_for_output_context'>for_output_context</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_field'>field</span><span class='op'>|</span> <span class='id identifier rubyid_owner'>owner</span><span class='op'>::</span><span class='const'>ResultContext</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='symbol'>:attr_reader</span><span class='comma'>,</span> <span class='id identifier rubyid_field'>field</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_owner'>owner</span><span class='op'>::</span><span class='const'>ResultContext</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_deep_dup'>deep_dup</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_owner-class_method">
+  
+    .<strong>register_owner</strong>(owner)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_register_owner'>register_owner</span><span class='lparen'>(</span><span class='id identifier rubyid_owner'>owner</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_owner'>owner</span><span class='period'>.</span><span class='id identifier rubyid_const_set'>const_set</span><span class='lparen'>(</span><span class='symbol'>:ResultContext</span><span class='comma'>,</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
@@ -336,51 +414,28 @@
       <div class="method_details first">
   <h3 class="signature first" id="[]-instance_method">
   
-    #<strong>[]</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>[]</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>read an attribute by key</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Object</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the attribute value</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24</pre>
+6
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 6</span>
 
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:[]</span><span class='comma'>,</span> <span class='symbol'>:as_json</span><span class='comma'>,</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span></pre>
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -389,51 +444,28 @@
       <div class="method_details ">
   <h3 class="signature " id="as_json-instance_method">
   
-    #<strong>as_json</strong>  &#x21d2; <tt>Hash</tt> 
+    #<strong>as_json</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns the context as a json hash.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the context as a json hash</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 7</span>
 
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:[]</span><span class='comma'>,</span> <span class='symbol'>:as_json</span><span class='comma'>,</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -442,7 +474,7 @@
       <div class="method_details ">
   <h3 class="signature " id="to_hash-instance_method">
   
-    #<strong>to_hash</strong>  &#x21d2; <tt>Hash</tt> 
+    #<strong>to_hash</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -452,45 +484,22 @@
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    <p class="note private">
-  <strong>This method is part of a private API.</strong>
-  You should avoid using this method if possible, as it may be removed or be changed in the future.
-</p>
-<p>The context as a hash</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 27</span>
 
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:[]</span><span class='comma'>,</span> <span class='symbol'>:as_json</span><span class='comma'>,</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='ivar'>@attributes</span><span class='period'>.</span><span class='id identifier rubyid_with_indifferent_access'>with_indifferent_access</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -499,51 +508,28 @@
       <div class="method_details ">
   <h3 class="signature " id="to_json-instance_method">
   
-    #<strong>to_json</strong>  &#x21d2; <tt>String</tt> 
+    #<strong>to_json</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Returns the context as a json string.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>the context as a json string</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-24</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/context/result.rb', line 8</span>
 
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:[]</span><span class='comma'>,</span> <span class='symbol'>:as_json</span><span class='comma'>,</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -554,7 +540,7 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  6 19:37:46 2023 by
+  Generated on Mon Jan  8 18:11:15 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>

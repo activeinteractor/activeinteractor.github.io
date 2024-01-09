@@ -85,6 +85,11 @@
 
   
   
+  <dl>
+      <dt>Extended by:</dt>
+      <dd>ActiveModel::Naming</dd>
+  </dl>
+  
   
   
   
@@ -101,7 +106,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>The object returned by an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span></p>
+    <p>An interactor result</p>
 
 
   </div>
@@ -119,7 +124,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#data-instance_method" title="#data (instance method)">#<strong>data</strong>  &#x21d2; ActiveInteractor::Context::Result </a>
+      <a href="#data-instance_method" title="#data (instance method)">#<strong>data</strong>  &#x21d2; ActiveInteractor::Context::Result, ... </a>
     
 
     
@@ -138,7 +143,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The data returned by the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span>.</p>
+    <span class="summary_desc"><div class='inline'><p>The data returned by the interactor.</p>
 </div></span>
   
 </li>
@@ -166,7 +171,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The errors returned by the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span>.</p>
+    <span class="summary_desc"><div class='inline'><p>The errors from the interactor.</p>
 </div></span>
   
 </li>
@@ -204,7 +209,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> is a failure.</p>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the result is a failure.</p>
 </div></span>
   
 </li>
@@ -229,7 +234,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Whether or not the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> is a success.</p>
+    <span class="summary_desc"><div class='inline'><p>Whether or not the result is a success.</p>
 </div></span>
   
 </li>
@@ -238,7 +243,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Hash {Symbol =&gt; Boolean, Hash} </a>
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Object </a>
     
 
     
@@ -254,16 +259,16 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>The <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> as a Hash.</p>
+    <span class="summary_desc"><div class='inline'><p>Return the result as a hash.</p>
 </div></span>
   
 </li>
 
       
-        <li class="public deprecated">
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>  &#x21d2; Hash {Symbol =&gt; Boolean, Hash} </a>
+      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>(*args, &amp;block)  &#x21d2; Object </a>
     
 
     
@@ -273,12 +278,11 @@
   
   
   
-  <span class="deprecated note title">deprecated</span>
+  
   
 
   
-    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>will be removed in version 2.0.0-alpha.3.0.0
-use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveInteractor::Result#to_hash (method)">#to_hash</a></span> instead</p>
+    <span class="summary_desc"><div class='inline'><p>Return a result as a JSON string.</p>
 </div></span>
   
 </li>
@@ -289,12 +293,6 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 
 
   
-  
-  
-  
-  
-  
-  
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
     
@@ -303,7 +301,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <div class="method_details first">
   <h3 class="signature first" id="data-instance_method">
   
-    #<strong>data</strong>  &#x21d2; <tt><span class='object_link'><a href="Context/Result.html" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span></tt>  <span class="extras">(readonly)</span>
+    #<strong>data</strong>  &#x21d2; <tt><span class='object_link'><a href="Context/Result.html" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span></tt>, ...  <span class="extras">(readonly)</span>
   
 
   
@@ -311,8 +309,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the data returned by the
-<span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span>.</p>
+    <p>Returns the data returned by the interactor.</p>
 
 
   </div>
@@ -323,26 +320,9 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>Given an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> that creates an ActiveRecord User</p>
-</div></p>
-      
-      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>CreateUser</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../ActiveInteractor.html" title="ActiveInteractor (module)">ActiveInteractor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Interactor.html" title="ActiveInteractor::Interactor (module)">Interactor</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">Base</a></span></span>
-  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:login</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The login for the User</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
-  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The password for the User</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
-  <span class='id identifier rubyid_argument'>argument</span> <span class='symbol'>:password_confirmation</span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The password confirmation for the user</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
-
-  <span class='id identifier rubyid_returns'>returns</span> <span class='symbol'>:user</span><span class='comma'>,</span> <span class='const'>User</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The created User</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>required:</span> <span class='kw'>true</span>
-
-  <span class='kw'>def</span> <span class='id identifier rubyid_interact'>interact</span>
-    <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_context'>context</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span>
-
-<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen.me</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span>
-
-<span class='comment'>#=&gt; &lt;# User @login=&#39;johndoe&#39;&gt;</span></code></pre>
+<span class='comment'>#=&gt; &lt;#User @email=&quot;hello@aaronmallen.me&quot;&gt;</span></code></pre>
     
   </div>
 
@@ -352,13 +332,12 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Context/Result.html" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Context/Result.html" title="ActiveInteractor::Context::Result (class)">ActiveInteractor::Context::Result</a></span></tt>, <tt>Object</tt>, <tt>nil</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>the data returned by the
-<span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span></p>
+        <div class='inline'><p>the data returned by the interactor</p>
 </div>
       
     </li>
@@ -371,6 +350,15 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
+25
+26
+27
+28
+29
+30
+31
+32
+33
 34
 35
 36
@@ -505,39 +493,44 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 165
 166
 167
-168</pre>
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 25</span>
 
 <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Result (class)">Result</a></span></span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>ActiveModelErrorMethods</span>
+  <span class='id identifier rubyid_extend'>extend</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Naming</span>
 
-  <span class='comment'># @!method to_json
-</span>  <span class='comment'># The {ActiveInteractor::Interactor::Base result} as a Hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; {
-</span>  <span class='comment'>#  #=&gt;   :success =&gt; false,
-</span>  <span class='comment'>#  #=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span>  <span class='comment'>#  #=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span>  <span class='comment'>#  #=&gt; }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @deprecated will be removed in version 2.0.0-alpha.3.0.0
-</span>  <span class='comment'>#  use {#to_hash} instead
-</span>  <span class='comment'># @return [Hash {Symbol =&gt; Boolean, Hash}]
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span><span class='comma'>,</span> <span class='symbol'>:errors</span>
+
+  <span class='comment'># Return a result as a JSON string
 </span>  <span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span>
 
-  <span class='comment'># @private
+  <span class='comment'># Status codes for interactor results
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
 </span>  <span class='const'>STATUS</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>success:</span> <span class='int'>0</span><span class='comma'>,</span>
     <span class='label'>failed_at_input:</span> <span class='int'>1</span><span class='comma'>,</span>
@@ -545,21 +538,47 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <span class='label'>failed_at_output:</span> <span class='int'>3</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
 
-  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span>
-
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='comment'># @private
-</span>    <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-    <span class='comment'># @private
+    <span class='comment'># Return a failed result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>    <span class='comment'># @param errors [ActiveModel::Errors, Hash, String] the errors from the interactor
+</span>    <span class='comment'># @param status [Integer] the status code for the result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @return [ActiveInteractor::Result] the failed result
 </span>    <span class='kw'>def</span> <span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>errors:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:failed_at_runtime</span><span class='rbracket'>]</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_parse_errors'>parse_errors</span><span class='lparen'>(</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='op'>|</span>
         <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
       <span class='kw'>end</span>
       <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Needed for ActiveModel::Errors
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_human_attribute_name'>human_attribute_name</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid__options'>_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_s</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_humanize'>humanize</span> <span class='op'>:</span> <span class='id identifier rubyid_attribute'>attribute</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Needed for ActiveModel::Errors
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_lookup_ancestors'>lookup_ancestors</span>
+      <span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Return a successful result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @return [ActiveInteractor::Result] the successful result
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_private'>private</span>
@@ -577,68 +596,90 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_private_class_method'>private_class_method</span> <span class='symbol'>:new</span>
-  <span class='comment'># @private
+
+  <span class='comment'># Create a new instance of {ActiveInteractor::Result}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param status [Integer] the status code for the result
+</span>  <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [ActiveInteractor::Result] the result
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>status:</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
     <span class='ivar'>@status</span> <span class='op'>=</span> <span class='id identifier rubyid_status'>status</span>
     <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
     <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Errors</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a failure
+  <span class='comment'># Whether or not the result is a failure
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
+</span>  <span class='comment'># @example When the result is a success
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;password&#39;
+</span>  <span class='comment'>#  )
 </span>  <span class='comment'>#  result.failure?
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; true
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
-</span>  <span class='comment'>#  result.failure?
-</span>  <span class='comment'>#
 </span>  <span class='comment'>#  #=&gt; false
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='comment'># @example When the result is a failure
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;not password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.failure?
+</span>  <span class='comment'>#  #=&gt; true
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean] whether or not the result is a failure
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
     <span class='op'>!</span><span class='id identifier rubyid_success?'>success?</span>
   <span class='kw'>end</span>
   <span class='kw'>alias</span> <span class='id identifier rubyid_failed?'>failed?</span> <span class='id identifier rubyid_failure?'>failure?</span>
 
-  <span class='comment'># @private
+  <span class='comment'># Needed for ActiveModel::Errors
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_read_attribute_for_validation'>read_attribute_for_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_data'>data</span><span class='op'>&amp;.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a success
+  <span class='comment'># Whether or not the result is a success
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='comment'># @example When the result is a success
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.success?
+</span>  <span class='comment'>#  #=&gt; true
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example When the result is a failure
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;not password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.success?
+</span>  <span class='comment'>#  #=&gt; false
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean] whether or not the result is a failure
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
     <span class='ivar'>@status</span> <span class='op'>==</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span>
   <span class='kw'>end</span>
   <span class='kw'>alias</span> <span class='id identifier rubyid_successful?'>successful?</span> <span class='id identifier rubyid_success?'>success?</span>
 
-  <span class='comment'># The {ActiveInteractor::Interactor::Base result} as a Hash
+  <span class='comment'># Return the result as a hash
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  result = CreateUser.perform(email: &#39;hello@aaronmallen&#39;, password: &#39;password&#39;)
 </span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; {
-</span>  <span class='comment'>#  #=&gt;   :success =&gt; false,
-</span>  <span class='comment'>#  #=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span>  <span class='comment'>#  #=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span>  <span class='comment'>#  #=&gt; }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Hash {Symbol =&gt; Boolean, Hash}]
+</span>  <span class='comment'>#  #=&gt; { success: true, status: 0, errors: {}, data: { user: &lt;#User&gt; } }
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
     <span class='lbrace'>{</span>
       <span class='label'>success:</span> <span class='id identifier rubyid_success?'>success?</span><span class='comma'>,</span>
+      <span class='label'>status:</span> <span class='ivar'>@status</span><span class='comma'>,</span>
       <span class='label'>errors:</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
       <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
     <span class='rbrace'>}</span>
@@ -663,14 +704,27 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the errors returned by the
-<span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span>.</p>
+    <p>Returns the errors from the interactor.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span>
+  <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not password</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_full_messages'>full_messages</span>
+<span class='comment'>#=&gt; [&quot;Password confirmation doesn&#39;t match Password&quot;]</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -682,20 +736,12 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       
       
         &mdash;
-        <div class='inline'><p>the errors returned by the
-<span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span></p>
+        <div class='inline'><p>the errors from the interactor</p>
 </div>
       
     </li>
   
 </ul>
-
-  <p class="tag_title">See Also:</p>
-  <ul class="see">
-    
-      <li><a href="https://github.com/rails/rails/blob/main/activemodel/lib/active_model/errors.rb" target="_parent" title="ActiveModel::Errors">ActiveModel::Errors</a></li>
-    
-  </ul>
 
 </div><table class="source_code">
   <tr>
@@ -703,6 +749,15 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
+25
+26
+27
+28
+29
+30
+31
+32
+33
 34
 35
 36
@@ -837,39 +892,44 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 165
 166
 167
-168</pre>
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 25</span>
 
 <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="ActiveInteractor::Result (class)">Result</a></span></span>
-  <span class='id identifier rubyid_include'>include</span> <span class='const'>ActiveModelErrorMethods</span>
+  <span class='id identifier rubyid_extend'>extend</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Naming</span>
 
-  <span class='comment'># @!method to_json
-</span>  <span class='comment'># The {ActiveInteractor::Interactor::Base result} as a Hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; {
-</span>  <span class='comment'>#  #=&gt;   :success =&gt; false,
-</span>  <span class='comment'>#  #=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span>  <span class='comment'>#  #=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span>  <span class='comment'>#  #=&gt; }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @deprecated will be removed in version 2.0.0-alpha.3.0.0
-</span>  <span class='comment'>#  use {#to_hash} instead
-</span>  <span class='comment'># @return [Hash {Symbol =&gt; Boolean, Hash}]
+  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span><span class='comma'>,</span> <span class='symbol'>:errors</span>
+
+  <span class='comment'># Return a result as a JSON string
 </span>  <span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span>
 
-  <span class='comment'># @private
+  <span class='comment'># Status codes for interactor results
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
 </span>  <span class='const'>STATUS</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>success:</span> <span class='int'>0</span><span class='comma'>,</span>
     <span class='label'>failed_at_input:</span> <span class='int'>1</span><span class='comma'>,</span>
@@ -877,21 +937,47 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <span class='label'>failed_at_output:</span> <span class='int'>3</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
 
-  <span class='id identifier rubyid_attr_reader'>attr_reader</span> <span class='symbol'>:data</span>
-
   <span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
-    <span class='comment'># @private
-</span>    <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-    <span class='comment'># @private
+    <span class='comment'># Return a failed result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>    <span class='comment'># @param errors [ActiveModel::Errors, Hash, String] the errors from the interactor
+</span>    <span class='comment'># @param status [Integer] the status code for the result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @return [ActiveInteractor::Result] the failed result
 </span>    <span class='kw'>def</span> <span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>errors:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:failed_at_runtime</span><span class='rbracket'>]</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_parse_errors'>parse_errors</span><span class='lparen'>(</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='op'>|</span>
         <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
       <span class='kw'>end</span>
       <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Needed for ActiveModel::Errors
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_human_attribute_name'>human_attribute_name</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid__options'>_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_s</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_humanize'>humanize</span> <span class='op'>:</span> <span class='id identifier rubyid_attribute'>attribute</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Needed for ActiveModel::Errors
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_lookup_ancestors'>lookup_ancestors</span>
+      <span class='lbracket'>[</span><span class='kw'>self</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Return a successful result
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @visibility private
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>    <span class='comment'>#
+</span>    <span class='comment'># @return [ActiveInteractor::Result] the successful result
+</span>    <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>status:</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_private'>private</span>
@@ -909,68 +995,90 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_private_class_method'>private_class_method</span> <span class='symbol'>:new</span>
-  <span class='comment'># @private
+
+  <span class='comment'># Create a new instance of {ActiveInteractor::Result}
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @param status [Integer] the status code for the result
+</span>  <span class='comment'># @param data [ActiveInteractor::Context::Result, Object, nil] the data returned by the interactor
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [ActiveInteractor::Result] the result
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>status:</span><span class='comma'>,</span> <span class='label'>data:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
     <span class='ivar'>@status</span> <span class='op'>=</span> <span class='id identifier rubyid_status'>status</span>
     <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
     <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='const'>ActiveModel</span><span class='op'>::</span><span class='const'>Errors</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a failure
+  <span class='comment'># Whether or not the result is a failure
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
+</span>  <span class='comment'># @example When the result is a success
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;password&#39;
+</span>  <span class='comment'>#  )
 </span>  <span class='comment'>#  result.failure?
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; true
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
-</span>  <span class='comment'>#  result.failure?
-</span>  <span class='comment'>#
 </span>  <span class='comment'>#  #=&gt; false
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='comment'># @example When the result is a failure
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;not password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.failure?
+</span>  <span class='comment'>#  #=&gt; true
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean] whether or not the result is a failure
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
     <span class='op'>!</span><span class='id identifier rubyid_success?'>success?</span>
   <span class='kw'>end</span>
   <span class='kw'>alias</span> <span class='id identifier rubyid_failed?'>failed?</span> <span class='id identifier rubyid_failure?'>failure?</span>
 
-  <span class='comment'># @private
+  <span class='comment'># Needed for ActiveModel::Errors
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @visibility private
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_read_attribute_for_validation'>read_attribute_for_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_data'>data</span><span class='op'>&amp;.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='comment'># Whether or not the {ActiveInteractor::Interactor::Base result} is a success
+  <span class='comment'># Whether or not the result is a success
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Boolean]
+</span>  <span class='comment'># @example When the result is a success
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.success?
+</span>  <span class='comment'>#  #=&gt; true
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @example When the result is a failure
+</span>  <span class='comment'>#  result = CreateUser.perform(
+</span>  <span class='comment'>#    email: &#39;hello@aaronmallen&#39;,
+</span>  <span class='comment'>#    password: &#39;password&#39;,
+</span>  <span class='comment'>#    password_confirmation: &#39;not password&#39;
+</span>  <span class='comment'>#  )
+</span>  <span class='comment'>#  result.success?
+</span>  <span class='comment'>#  #=&gt; false
+</span>  <span class='comment'>#
+</span>  <span class='comment'># @return [Boolean] whether or not the result is a failure
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
     <span class='ivar'>@status</span> <span class='op'>==</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span>
   <span class='kw'>end</span>
   <span class='kw'>alias</span> <span class='id identifier rubyid_successful?'>successful?</span> <span class='id identifier rubyid_success?'>success?</span>
 
-  <span class='comment'># The {ActiveInteractor::Interactor::Base result} as a Hash
+  <span class='comment'># Return the result as a hash
 </span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} succeeds
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;password&#39;)
+</span>  <span class='comment'># @example
+</span>  <span class='comment'>#  result = CreateUser.perform(email: &#39;hello@aaronmallen&#39;, password: &#39;password&#39;)
 </span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @example When an {ActiveInteractor::Interactor::Base interactor} fails
-</span>  <span class='comment'>#  result = CreateUser.perform(login: &#39;johndoe&#39;, password: &#39;password&#39;, password_confirmation: &#39;notpassword&#39;)
-</span>  <span class='comment'>#  result.to_hash
-</span>  <span class='comment'>#
-</span>  <span class='comment'>#  #=&gt; {
-</span>  <span class='comment'>#  #=&gt;   :success =&gt; false,
-</span>  <span class='comment'>#  #=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span>  <span class='comment'>#  #=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span>  <span class='comment'>#  #=&gt; }
-</span>  <span class='comment'>#
-</span>  <span class='comment'># @return [Hash {Symbol =&gt; Boolean, Hash}]
+</span>  <span class='comment'>#  #=&gt; { success: true, status: 0, errors: {}, data: { user: &lt;#User&gt; } }
 </span>  <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
     <span class='lbrace'>{</span>
       <span class='label'>success:</span> <span class='id identifier rubyid_success?'>success?</span><span class='comma'>,</span>
+      <span class='label'>status:</span> <span class='ivar'>@status</span><span class='comma'>,</span>
       <span class='label'>errors:</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
       <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
     <span class='rbrace'>}</span>
@@ -1004,7 +1112,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Whether or not the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> is a failure</p>
+    <p>Whether or not the result is a failure</p>
 
 
   </div>
@@ -1015,22 +1123,28 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> fails</p>
+        <p class="example_title"><div class='inline'><p>When the result is a success</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>notpassword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span>
+  <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span>
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_failure?'>failure?</span>
-
-<span class='comment'>#=&gt; true</span></code></pre>
+<span class='comment'>#=&gt; false</span></code></pre>
     
       
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> succeeds</p>
+        <p class="example_title"><div class='inline'><p>When the result is a failure</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span>
+  <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not password</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span>
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_failure?'>failure?</span>
-
-<span class='comment'>#=&gt; false</span></code></pre>
+<span class='comment'>#=&gt; true</span></code></pre>
     
   </div>
 
@@ -1044,6 +1158,10 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       
       
       
+        &mdash;
+        <div class='inline'><p>whether or not the result is a failure</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1054,12 +1172,12 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
-123
-124
-125</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
   <span class='op'>!</span><span class='id identifier rubyid_success?'>success?</span>
@@ -1084,13 +1202,42 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Whether or not the <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> is a success</p>
+    <p>Whether or not the result is a success</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>When the result is a success</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span>
+  <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+<span class='comment'>#=&gt; true</span></code></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>When the result is a failure</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span>
+  <span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not password</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+<span class='comment'>#=&gt; false</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1100,6 +1247,10 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'><p>whether or not the result is a failure</p>
+</div>
       
     </li>
   
@@ -1111,12 +1262,12 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
-136
-137
-138</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
   <span class='ivar'>@status</span> <span class='op'>==</span> <span class='const'>STATUS</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span>
@@ -1129,7 +1280,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <div class="method_details ">
   <h3 class="signature " id="to_hash-instance_method">
   
-    #<strong>to_hash</strong>  &#x21d2; <tt>Hash {Symbol =&gt; Boolean, Hash}</tt> 
+    #<strong>to_hash</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1141,7 +1292,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>The <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> as a Hash</p>
+    <p>Return the result as a hash</p>
 
 
   </div>
@@ -1152,42 +1303,12 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> succeeds</p>
-</div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>email:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>hello@aaronmallen</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-
-<span class='comment'>#=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }</span></code></pre>
-    
-      
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> fails</p>
-</div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>notpassword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-
-<span class='comment'>#=&gt; {
-</span><span class='comment'>#=&gt;   :success =&gt; false,
-</span><span class='comment'>#=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span><span class='comment'>#=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span><span class='comment'>#=&gt; }</span></code></pre>
+<span class='comment'>#=&gt; { success: true, status: 0, errors: {}, data: { user: &lt;#User&gt; } }</span></code></pre>
     
   </div>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash {Symbol =&gt; Boolean, Hash}</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1195,20 +1316,22 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166</pre>
+181
+182
+183
+184
+185
+186
+187
+188</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='lbrace'>{</span>
     <span class='label'>success:</span> <span class='id identifier rubyid_success?'>success?</span><span class='comma'>,</span>
+    <span class='label'>status:</span> <span class='ivar'>@status</span><span class='comma'>,</span>
     <span class='label'>errors:</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
     <span class='label'>data:</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
   <span class='rbrace'>}</span>
@@ -1221,7 +1344,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <div class="method_details ">
   <h3 class="signature " id="to_json-instance_method">
   
-    #<strong>to_json</strong>  &#x21d2; <tt>Hash {Symbol =&gt; Boolean, Hash}</tt> 
+    #<strong>to_json</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1229,56 +1352,13 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
   
 </h3><div class="docstring">
   <div class="discussion">
-    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>will be removed in version 2.0.0-alpha.3.0.0
-use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveInteractor::Result#to_hash (method)">#to_hash</a></span> instead</p>
-</div></div>
-<p>The <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">result</a></span> as a Hash</p>
+    <p>Return a result as a JSON string</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> succeeds</p>
-</div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-
-<span class='comment'>#=&gt; { :success =&gt; true, :errors =&gt; {}, :data =&gt; { :login =&gt; &#39;johndoe&#39; } }</span></code></pre>
-    
-      
-        <p class="example_title"><div class='inline'><p>When an <span class='object_link'><a href="Interactor/Base.html" title="ActiveInteractor::Interactor::Base (class)">interactor</a></span> fails</p>
-</div></p>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>CreateUser</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span><span class='lparen'>(</span><span class='label'>login:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>johndoe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>password</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>password_confirmation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>notpassword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
-
-<span class='comment'>#=&gt; {
-</span><span class='comment'>#=&gt;   :success =&gt; false,
-</span><span class='comment'>#=&gt;   :errors =&gt; { :password_confirmation =&gt; [&quot;doesn&#39;t match Password&quot;] },
-</span><span class='comment'>#=&gt;   :data =&gt; { :login =&gt; &#39;johndoe&#39; }
-</span><span class='comment'>#=&gt; }</span></code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Hash {Symbol =&gt; Boolean, Hash}</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1286,12 +1366,16 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
       <pre class="lines">
 
 
-59</pre>
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/active_interactor/result.rb', line 31</span>
 
-<span class='id identifier rubyid_delegate'>delegate</span> <span class='symbol'>:to_json</span><span class='comma'>,</span> <span class='label'>to:</span> <span class='symbol'>:to_hash</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_to_hash'>to_hash</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1302,7 +1386,7 @@ use <span class='object_link'><a href="#to_hash-instance_method" title="ActiveIn
 </div>
 
       <div id="footer">
-  Generated on Mon Nov  6 19:37:45 2023 by
+  Generated on Mon Jan  8 18:11:14 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.2).
 </div>
