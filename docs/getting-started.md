@@ -16,7 +16,7 @@ These docs describe version `2.0.0-alpha.x` of the gem which is in pre-release. 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'activeinteractor', '2.0.0.alpha.2.3.4'
+gem 'activeinteractor', '2.0.0.alpha.4.0.0'
 ```
 
 Or install it yourself as:
